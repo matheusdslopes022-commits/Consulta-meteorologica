@@ -1,0 +1,80 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: linear-gradient(170deg,
+            rgb(15, 53, 99) 0%,
+            rgb(29, 90, 158) 55%,
+            rgb(42, 111, 181) 100%);
+    background-attachment: fixed;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.header {
+    display: flex;
+    padding: 20px;
+    
+}
+
+.icon-sol {
+    width: 50px;
+    height: 50px;
+}
+
+.header h1 {
+    padding: 5px;
+}
+
+.header span {
+    margin-left: auto;
+    padding: 20px;
+    
+}
+
+.vidro {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 20px;
+    padding: 20px 24px;
+    margin-left: 25px;
+    height: 120px;
+    width: 900px;
+}
+
+form{
+    padding: 10px;
+}
+
+#pesquisar p{
+    padding-left: 10px;
+}
+
+#cidade{
+    width: 700px;
+    height: 35px;
+    border-radius: 10px;
+    border: 0;
+    padding-left: 15px;
+}
+
+#button {
+    min-height: 38px;
+    padding: 0 28px;
+    border: 0;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    color: rgb(59, 42, 0);
+    background: rgb(253, 230, 138);
+    margin-left: 15px;
+}
+
