@@ -15,21 +15,28 @@
             stroke="rgb(253, 230, 138)" stroke-width="5" stroke-linecap="round" aria-hidden="true">
             <circle cx="48" cy="48" r="19" />
             <path d="M48 8v12M48 76v12M8 48h12M76 48h12M20 20l8 8M68 68l8 8M20 76l8-8M68 28l8-8" />
-        </svg >
+        </svg>
         <h1>Consulta meteorológica</h1>
         <span>Dados: OPEN-METEO</span>
     </header>
 
     <section id="pesquisar">
         <div class="vidro">
-        <p>Pesquisar cidade</p>
-        <form>
-            <input type="text" id="cidade" placeholder="Porto Alegre">
-            <button id="button">Buscar</button>
-        </form>
-         </div>
+            <p>Pesquisar cidade</p>
+            <form>
+                <input type="text" id="cidade" placeholder="Porto Alegre">
+                <button id="button">Buscar</button>
+            </form>
+        </div>
     </section>
-   
+
+    <section class="resultado">
+        <p id="mensagem"></p>
+        <div id="resultado"></div>
+    </section>
+
+    <div id="clima"></div>
+
 </body>
 
 </html>
