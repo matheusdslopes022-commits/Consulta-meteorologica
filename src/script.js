@@ -63,41 +63,7 @@ botao_buscar.addEventListener("click", (evento) => {
 
                     item.classList.add("selecionada");
                     console.log("Cidade selecionada:", local);
-
-                    const parametrosClima = new URLSearchParams({
-                        latitude: local.latitude,
-                        longitude: local.longitude,
-                        current: "temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m",
-                        timezone: "auto"
-                    });
-
-                    clima.textContent = "Carregando clima...";
-
-                    fetch(`https://api.open-meteo.com/v1/forecast?${parametrosClima}`)
-                        .then(function (resposta) {
-                            if (!resposta.ok) {
-                                throw new Error(`Erro HTTP: ${resposta.status}`);
-                            }
-
-                            return resposta.json();
-                        })
-                        .then(function (dados) {
-                            const atual = dados.current;
-
-                            clima.innerHTML = `
-                            <h2>${local.name}</h2>
-                            <p>Temperatura: ${atual.temperature_2m} °C</p>
-                            <p>Sensação térmica: ${atual.apparent_temperature} °C</p>
-                            <p>Umidade: ${atual.relative_humidity_2m}%</p>
-                            <p>Vento: ${atual.wind_speed_10m} km/h</p>
-                            <p>Código do clima: ${atual.weather_code}</p>`;
-
-                            console.log("Dados do clima:", dados);
-                        })
-                        .catch(function (erro) {
-                            clima.textContent = "Não foi possível carregar o clima.";
-                            console.error(erro);
-                        });
+                    
 
                 });
             });
