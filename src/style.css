@@ -117,6 +117,10 @@ form{
     border: 1px solid rgb(253, 230, 138);;
 }
 
+.clima{
+    display: none;
+}
+
 #clima{
     width: 900px;
 
@@ -127,3 +131,6 @@ form{
     background-color: rgba(255, 255, 255, 0.10);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+
+

@@ -6,7 +6,7 @@ botao_buscar.addEventListener("click", (evento) => {
     const cidade = document.getElementById("cidade").value.trim();
     const resultado = document.getElementById("resultado");
     const clima = document.getElementById("clima");
-
+    document.querySelector(".resultado").style.display = "none";
     if (cidade === "") {
         alert("Campo vazio, Digite novamente");
         return
@@ -57,6 +57,7 @@ botao_buscar.addEventListener("click", (evento) => {
                 resultado.append(item);
 
                 item.addEventListener("click", () => {
+                    document.querySelector(".clima").style.display = "block";
                     document.querySelectorAll(".item-cidade").forEach(function (cidade) {
                         cidade.classList.remove("selecionada");
                     });
